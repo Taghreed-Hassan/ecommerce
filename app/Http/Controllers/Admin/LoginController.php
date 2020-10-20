@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -32,12 +33,21 @@ class LoginController extends Controller
 
 
 
-
-
     }//end of login
 
+/*
+ * code in tinker
+      public function save(){
+        $admin=new  App\Models\Admin();
+          $admin->name="taghreed";
+          $admin->email="admin@admin.com";
+          $admin->password=bcrypt("123456789");
+          $admin-> save();
 
 
 
+
+       }
+*/
 
 }
