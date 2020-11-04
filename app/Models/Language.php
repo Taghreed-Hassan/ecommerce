@@ -20,8 +20,16 @@ class Language extends Model
         return $query->where('active', 1);
     }
 
+    public function  scopeSelection($query){
+
+        return $query -> select('id','abbr', 'name', 'direction', 'active');
+    }
+
 
     public function getActive(){
         return   $this -> active == 1 ? 'مفعل'  : 'غير مفعل';
     }
 }
+
+
+

@@ -1484,7 +1484,7 @@ Test.prototype = {
 };
 
 // `assert` initialized at top of scope
-// Assert helpers
+// Assert Helpers
 // All of these must either call QUnit.push() or manually do:
 // - runLoggingCallbacks( "log", .. );
 // - config.current.assertions.push({ .. });
@@ -1660,7 +1660,7 @@ assert = QUnit.assert = {
 
 /**
  * @deprecated since 1.8.0
- * Kept assertion helpers in root for backwards compatibility.
+ * Kept assertion Helpers in root for backwards compatibility.
  */
 extend( QUnit.constructor.prototype, assert );
 

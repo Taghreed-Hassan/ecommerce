@@ -815,13 +815,13 @@
             var v = currentValue;
 
             if(allowEmpty && isEmpty) {
-                //if selected color is empty, hide the helpers
+                //if selected color is empty, hide the Helpers
                 alphaSlideHelper.hide();
                 slideHelper.hide();
                 dragHelper.hide();
             }
             else {
-                //make sure helpers are visible
+                //make sure Helpers are visible
                 alphaSlideHelper.show();
                 slideHelper.show();
                 dragHelper.show();

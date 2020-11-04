@@ -20,4 +20,19 @@ class MainCategory extends Model
     }
 
 
+    public function scopeSelection($query)
+    {
+
+        return $query->select('id', 'translation_lang', 'name', 'slug', 'photo', 'active', 'translation_of');
+    }
+
+
+    public function getActive()
+    {
+        return $this->active == 1 ? 'مفعل' : 'غير مفعل';
+
+    }
+
+
+
 }

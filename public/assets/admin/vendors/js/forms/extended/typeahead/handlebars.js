@@ -183,7 +183,7 @@ var __module2__ = (function(__dependency1__, __dependency2__) {
 
     registerHelper: function(name, fn, inverse) {
       if (toString.call(name) === objectType) {
-        if (inverse || fn) { throw new Exception('Arg not supported with multiple helpers'); }
+        if (inverse || fn) { throw new Exception('Arg not supported with multiple Helpers'); }
         Utils.extend(this.helpers, name);
       } else {
         if (inverse) { fn.not = inverse; }
@@ -252,8 +252,8 @@ var __module2__ = (function(__dependency1__, __dependency2__) {
         } else {
           for(var key in context) {
             if(context.hasOwnProperty(key)) {
-              if(data) { 
-                data.key = key; 
+              if(data) {
+                data.key = key;
                 data.index = i;
                 data.first = (i === 0);
               }
@@ -693,9 +693,9 @@ var __module9__ = (function() {
 
   var $0 = $$.length - 1;
   switch (yystate) {
-  case 1: return new yy.ProgramNode($$[$0-1]); 
+  case 1: return new yy.ProgramNode($$[$0-1]);
   break;
-  case 2: return new yy.ProgramNode([]); 
+  case 2: return new yy.ProgramNode([]);
   break;
   case 3:this.$ = new yy.ProgramNode([], $$[$0-1], $$[$0]);
   break;
@@ -711,7 +711,7 @@ var __module9__ = (function() {
   break;
   case 9:this.$ = [$$[$0]];
   break;
-  case 10: $$[$0-1].push($$[$0]); this.$ = $$[$0-1]; 
+  case 10: $$[$0-1].push($$[$0]); this.$ = $$[$0-1];
   break;
   case 11:this.$ = new yy.BlockNode($$[$0-2], $$[$0-1].inverse, $$[$0-1], $$[$0]);
   break;
@@ -767,7 +767,7 @@ var __module9__ = (function() {
   break;
   case 37:this.$ = new yy.IdNode($$[$0]);
   break;
-  case 38: $$[$0-2].push({part: $$[$0], separator: $$[$0-1]}); this.$ = $$[$0-2]; 
+  case 38: $$[$0-2].push({part: $$[$0], separator: $$[$0-1]}); this.$ = $$[$0-2];
   break;
   case 39:this.$ = [{part: $$[$0]}];
   break;
@@ -1089,14 +1089,14 @@ var __module9__ = (function() {
                                        this.begin("mu");
                                      }
                                      if(yy_.yytext) return 14;
-                                   
+
   break;
   case 1:return 14;
   break;
   case 2:
                                      this.popState();
                                      return 14;
-                                   
+
   break;
   case 3:strip(0,4); this.popState(); return 15;
   break;
@@ -1308,7 +1308,7 @@ var __module11__ = (function(__dependency1__) {
       if (!this.isChild) {
         var namespace = this.namespace;
 
-        var copies = "helpers = this.merge(helpers, " + namespace + ".helpers);";
+        var copies = "Helpers = this.merge(Helpers, " + namespace + ".Helpers);";
         if (this.environment.usePartial) { copies = copies + " partials = this.merge(partials, " + namespace + ".partials);"; }
         if (this.options.data) { copies = copies + " data = data || {};"; }
         out.push(copies);
@@ -1414,7 +1414,7 @@ var __module11__ = (function(__dependency1__) {
     // replace it on the stack with the result of properly
     // invoking blockHelperMissing.
     blockValue: function() {
-      this.context.aliases.blockHelperMissing = 'helpers.blockHelperMissing';
+      this.context.aliases.blockHelperMissing = 'Helpers.blockHelperMissing';
 
       var params = ["depth0"];
       this.setupParams(0, params);
@@ -1432,7 +1432,7 @@ var __module11__ = (function(__dependency1__) {
     // On stack, after, if no lastHelper: same as [blockValue]
     // On stack, after, if lastHelper: value
     ambiguousBlockValue: function() {
-      this.context.aliases.blockHelperMissing = 'helpers.blockHelperMissing';
+      this.context.aliases.blockHelperMissing = 'Helpers.blockHelperMissing';
 
       var params = ["depth0"];
       this.setupParams(0, params);
@@ -1682,7 +1682,7 @@ var __module11__ = (function(__dependency1__) {
     //
     // If the helper is not found, `helperMissing` is called.
     invokeHelper: function(paramSize, name) {
-      this.context.aliases.helperMissing = 'helpers.helperMissing';
+      this.context.aliases.helperMissing = 'Helpers.helperMissing';
 
       var helper = this.lastHelper = this.setupHelper(paramSize, name, true);
       var nonHelper = this.nameLookup('depth' + this.lastContext, name, 'context');
@@ -2005,7 +2005,7 @@ var __module11__ = (function(__dependency1__) {
       program = this.popStack();
 
       // Avoid setting fn and inverse if neither are set. This allows
-      // helpers to do a check for `if (options.fn)`
+      // Helpers to do a check for `if (options.fn)`
       if (program || inverse) {
         if (!program) {
           this.context.aliases.self = "this";

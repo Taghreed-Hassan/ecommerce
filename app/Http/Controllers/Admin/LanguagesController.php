@@ -6,60 +6,42 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LanguageRequest;
 use App\Models\Language;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Lang;
 
 class LanguagesController extends Controller
 {
-
     public function index()
     {
-
         $languages = Language::select()->paginate(PAGINATION_COUNT);
         return view('admin.languages.index', compact('languages'));
-
-
-        return view('admin.languages.index');
-
-
-    }//end index
-
-    public function scopeSelection($query)
-    {
-
-
-        return $query->select('id','abbr', 'name', 'active', 'direction');
     }
 
     public function create()
     {
-
-
         return view('admin.languages.create');
-
-    }//end of create
+    }
 
     public function store(LanguageRequest $request)
     {
-
-
         try {
+            $request->request->add(['active'=>0]);
 
             Language::create($request->except(['_token']));
             return redirect()->route('admin.languages')->with(['success' => 'تم حفظ اللغة بنجاح']);
         } catch (\Exception $ex) {
             return redirect()->route('admin.languages')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
         }
-    }//end of store
+    }
 
-      public function edit($id){
-          $language = Language::select()->find($id);
-          if (!$language) {
-              return redirect()->route('admin.languages')->with(['error' => 'هذه اللغة غير موجوده']);
-          }
+    public function edit($id)
+    {
+        $language = Language::select()->find($id);
+        if (!$language) {
+            return redirect()->route('admin.languages')->with(['error' => 'هذه اللغة غير موجوده']);
+        }
 
-          return view('admin.languages.edit', compact('language'));
-
-         }//end of edit
-
+        return view('admin.languages.edit', compact('language'));
+    }
 
     public function update($id, LanguageRequest $request)
     {
@@ -81,11 +63,7 @@ class LanguagesController extends Controller
         } catch (\Exception $ex) {
             return redirect()->route('admin.languages')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
         }
-    }//end of
-
-
-
-
+    }
 
     public function destroy($id)
     {
@@ -102,7 +80,5 @@ class LanguagesController extends Controller
         } catch (\Exception $ex) {
             return redirect()->route('admin.languages')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
         }
-    } //end of destroy
-
+    }
 }
-

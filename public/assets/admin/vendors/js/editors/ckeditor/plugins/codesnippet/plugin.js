@@ -128,7 +128,7 @@
 	} );
 
 	/**
-	 * Global helpers and classes of the Code Snippet plugin.
+	 * Global Helpers and classes of the Code Snippet plugin.
 	 *
 	 * For more information see the [Code Snippet Guide](#!/guide/dev_codesnippet).
 	 *

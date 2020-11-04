@@ -23,7 +23,7 @@
  *
  * Code structure:
  *  1. Default keymap
- *  2. Variable declarations and short basic helpers
+ *  2. Variable declarations and short basic Helpers
  *  3. Instance (External API) implementation
  *  4. Internal state tracking objects (input state, counter) implementation
  *     and instantiation
