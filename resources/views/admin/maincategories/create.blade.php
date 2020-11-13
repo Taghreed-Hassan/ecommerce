@@ -45,7 +45,7 @@
                                 @include('admin.includes.alerts.errors')
                                 <div class="card-content collapse show">
                                     <div class="card-body">
-                                        <form class="form" action=""
+                                        <form class="form" action="{{route('admin.main_categories.store')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
@@ -65,9 +65,10 @@
                                                 <h4 class="form-section"><i class="ft-home"></i> بيانات القسم </h4>
 
                                                 @if(get_languages() -> count() > 0)
+
                                                     @foreach(get_languages() as $index => $lang)
                                                         <div class="row">
-                                                            <div class="col-md-12">
+                                                            <div class="col-md-6">
                                                                 <div class="form-group">
                                                                     <label for="projectinput1"> اسم القسم - {{__('messages.'.$lang -> abbr)}} </label>
                                                                     <input type="text" value="" id="name"
@@ -81,9 +82,9 @@
                                                             </div>
 
 
-                                                            <div class="col-md-6 hidden">
+                                                            <div class="col-md-6 ">
                                                                 <div class="form-group">
-                                                                    <label for="projectinput1"> أختصار اللغة {{__('messages.'.$lang -> abbr)}} </label>
+                                                                    <label for="projectinput1">أختصار اللغة- {{__('messages.'.$lang -> abbr)}} </label>
                                                                     <input type="text" id="abbr"
                                                                            class="form-control"
                                                                            placeholder="  "
@@ -107,7 +108,7 @@
                                                                            class="switchery" data-color="success"
                                                                            checked/>
                                                                     <label for="switcheryColor4"
-                                                                           class="card-title ml-1">الحالة  {{__('messages.'.$lang -> abbr)}} </label>
+                                                                           class="card-title ml-1">الحالة-  {{__('messages.'.$lang -> abbr)}} </label>
 
                                                                     @error("category.$index.active")
                                                                     <span class="text-danger"> </span>

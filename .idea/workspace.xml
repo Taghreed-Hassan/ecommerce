@@ -20,30 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5703ac-9142-408d-a6e5-7cd22ba695b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/Genral.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Language.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Language.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MainCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MainCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/charts/flot/jquery.colorhelpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/charts/flot/jquery.colorhelpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/charts/flot/jquery.flot.image.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/charts/flot/jquery.flot.image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/charts/flot/jquery.flot.navigate.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/charts/flot/jquery.flot.navigate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/editors/ckeditor/plugins/codesnippet/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/editors/ckeditor/plugins/codesnippet/plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/editors/codemirror/keymap/vim.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/editors/codemirror/keymap/vim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/extensions/gcal.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/extensions/gcal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/forms/extended/typeahead/handlebars.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/forms/extended/typeahead/handlebars.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/forms/select/qunit-1.14.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/forms/select/qunit-1.14.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/pickers/spectrum/spectrum.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/pickers/spectrum/spectrum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/vendors/js/tables/handsontable/handsontable.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/vendors/js/tables/handsontable/handsontable.full.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/MainCategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/MainCategoryRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/maincategories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +195,16 @@
       <workItem from="1604160129332" duration="4016000" />
       <workItem from="1604304801507" duration="4192000" />
       <workItem from="1604394056199" duration="4512000" />
-      <workItem from="1604467636636" duration="5154000" />
+      <workItem from="1604467636636" duration="12963000" />
+      <workItem from="1604521068345" duration="4289000" />
+      <workItem from="1604529879231" duration="2765000" />
+      <workItem from="1604932417209" duration="2383000" />
+      <workItem from="1605213218741" duration="1946000" />
+      <workItem from="1605215313703" duration="1661000" />
+      <workItem from="1605217287322" duration="1729000" />
+      <workItem from="1605219265702" duration="1415000" />
+      <workItem from="1605273960298" duration="724000" />
+      <workItem from="1605278568315" duration="1166000" />
     </task>
     <servers />
   </component>
@@ -236,22 +228,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="319" y="0" key="#PHP/0.0.1366.738@0.0.1366.738" timestamp="1603772690902" />
-    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603241374494">
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604522879233">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1603241374494" />
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1604522879233" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1602456918191">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1602456918191" />
-    <state x="718" y="267" key="NewPhpFileDialog" timestamp="1603776638242">
+    <state x="718" y="267" key="NewPhpFileDialog" timestamp="1604495199352">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="718" y="267" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1603776638242" />
-    <state x="109" y="0" width="1141" height="738" key="SettingsEditor" timestamp="1604471303715">
+    <state x="718" y="267" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1604495199352" />
+    <state x="109" y="0" width="1141" height="738" key="SettingsEditor" timestamp="1604533682398">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="109" y="0" width="1141" height="738" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1604471303715" />
+    <state x="109" y="0" width="1141" height="738" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1604533682398" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1603772449919">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

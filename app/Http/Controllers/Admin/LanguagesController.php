@@ -24,7 +24,7 @@ class LanguagesController extends Controller
     public function store(LanguageRequest $request)
     {
         try {
-            $request->request->add(['active'=>0]);
+          //  $request->request->add(['active'=>0]);
 
             Language::create($request->except(['_token']));
             return redirect()->route('admin.languages')->with(['success' => 'تم حفظ اللغة بنجاح']);
