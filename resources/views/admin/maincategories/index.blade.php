@@ -42,7 +42,7 @@
                                 @include('admin.includes.alerts.success')
                                 @include('admin.includes.alerts.errors')
 
-                                <div class="card-content collapse show">
+                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
                                         <table
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
@@ -50,8 +50,8 @@
                                             <tr>
                                                 <th>القسم </th>
                                                 <th> اللغة</th>
-                                                <th>الحالة</th>
-                                                <th>صوره القسم</th>
+                                                 <th>الحالة</th>
+                                                 <th>صوره القسم</th>
                                                 <th>الإجراءات</th>
                                             </tr>
                                             </thead>
@@ -63,7 +63,7 @@
                                                         <td>{{$category -> name}}</td>
                                                         <td>{{get_default_lang()}}</td>
                                                         <td>{{$category -> getActive()}}</td>
-                                                        <td> <img style="width: 100px; height: 100px;" src="{{$category -> 	photo}}"></td>
+                                                        <td> <img style="width: 150px; height: 100px;" src="{{$category -> 	photo}}"></td>
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">

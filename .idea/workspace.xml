@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5703ac-9142-408d-a6e5-7cd22ba695b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/MainCategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/MainCategoryRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MainCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MainCategory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/maincategories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/maincategories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/maincategories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,6 +204,9 @@
       <workItem from="1605219265702" duration="1415000" />
       <workItem from="1605273960298" duration="724000" />
       <workItem from="1605278568315" duration="1166000" />
+      <workItem from="1605475095857" duration="1523000" />
+      <workItem from="1605564131228" duration="2665000" />
+      <workItem from="1605570872455" duration="814000" />
     </task>
     <servers />
   </component>
