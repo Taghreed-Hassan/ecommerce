@@ -99,7 +99,9 @@ return redirect()->route('admin.main_categories')->with(['error' => 'حدث خط
 public function edit($mainCat_id)
     {
         //get specific categories and its translations
-        $mainCategory = MainCategory::Selection()->find($mainCat_id);
+     $mainCategory = MainCategory::with('categories')
+        ->Selection()
+        ->find($mainCat_id);
 
 
 

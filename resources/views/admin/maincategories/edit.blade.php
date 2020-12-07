@@ -143,77 +143,128 @@
                                                         </button>
                                                     </div>
                                         </form>
-                                    </div>
-                                </div>
+                                 
 
 
+                                        <ul class="nav nav-tabs">
+                                            @isset($mainCategory -> categories)
+                                                @foreach($mainCategory -> categories   as $index =>  $translation)
+                                                    <li class="nav-item">
+                                                        <a class="nav-link @if($index ==  0) active @endif  " id="homeLable-tab"  data-toggle="tab"
+                                                           href="#homeLable{{$index}}" aria-controls="homeLable"
+                                                            aria-expanded="{{$index ==  0 ? 'true' : 'false'}}">
+                                                            {{$translation -> translation_lang}}</a>
+                                                    </li>
+                                                @endforeach
+                                            @endisset
+                                        </ul>
+                  
 
-<div class="card-content">
-                  <div class="card-body">
-                    <ul class="nav nav-tabs">
-                      <li class="nav-item">
-                        <a class="nav-link" id="homeIcon-tab" data-toggle="tab" href="#homeIcon" aria-controls="homeIcon"
-                        aria-expanded="true"> Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" id="profileIcon-tab" data-toggle="tab" href="#profileIcon"
-                        aria-controls="profileIcon" aria-expanded="false">Profile</a>
-                      </li>
-                     
-                      <li class="nav-item">
-                        <a class="nav-link" id="aboutIcon-tab" data-toggle="tab" href="#about" aria-controls="about"
-                        aria-expanded="false"> About</a>
-                      </li>
-                    </ul>
+<!--   ***********                  second form of  other language  *************           -->
+<div class="tab-content px-1 pt-1">
 
-                    
-                    <div class="tab-content px-1 pt-1">
-                      <div role="tabpanel" class="tab-pane" id="homeIcon" aria-labelledby="homeIcon-tab"
-                      aria-expanded="true">
-                        <p>Candy canes donut chupa chups candy canes lemon drops oat
-                          cake wafer. Cotton candy candy canes marzipan carrot cake.
-                          Sesame snaps lemon drops candy marzipan donut brownie tootsie
-                          roll. Icing croissant bonbon biscuit gummi bears.</p>
-                      </div>
-                      <div class="tab-pane active" id="profileIcon" role="tabpanel" aria-labelledby="profileIcon-tab"
-                      aria-expanded="false">
-                        <p>Pudding candy canes sugar plum cookie chocolate cake powder
-                          croissant. Carrot cake tiramisu danish candy cake muffin
-                          croissant tart dessert. Tiramisu caramels candy canes chocolate
-                          cake sweet roll liquorice icing cupcake.</p>
-                      </div>
-                    
-                    
-                      <div class="tab-pane" id="aboutIcon" role="tabpanel" aria-labelledby="aboutIcon-tab"
-                      aria-expanded="false">
-                        <p>Carrot cake dragée chocolate. Lemon drops ice cream wafer
-                          gummies dragée. Chocolate bar liquorice cheesecake cookie
-                          chupa chups marshmallow oat cake biscuit. Dessert toffee
-                          fruitcake ice cream powder tootsie roll cake.</p>
-                      </div>
+@isset($mainCategory -> categories)
+    @foreach($mainCategory -> categories   as $index =>  $translation)
+
+    <div role="tabpanel" class="tab-pane  @if($index ==  0) active  @endif  " id="homeLable{{$index}}"
+     aria-labelledby="homeLable-tab"
+     aria-expanded="{{$index ==  0 ? 'true' : 'false'}}">
+
+    <form class="form"
+          action="{{route('admin.main_categories.update',$translation -> id)}}"
+          method="POST"
+          enctype="multipart/form-data">
+        @csrf
+
+        <input name="id" value="{{$translation -> id}}" type="hidden">
+
+
+        <div class="form-body">
+
+            <h4 class="form-section"><i class="ft-home"></i> بيانات القسم </h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="projectinput1"> اسم القسم
+                            - {{__('messages.'.$translation -> translation_lang)}} </label>
+                        <input type="text" id="name"
+                               class="form-control"
+                               placeholder="  "
+                               value="{{$translation -> name}}"
+                               name="category[0][name]">
+                        @error("category.0.name")
+                        <span class="text-danger"> هذا الحقل مطلوب</span>
+                        @enderror
                     </div>
-                  </div>
                 </div>
 
 
+                <div class="col-md-6 hidden">
+                    <div class="form-group">
+                        <label for="projectinput1"> أختصار
+                            اللغة {{__('messages.'.$translation -> translation_lang)}} </label>
+                        <input type="text" id="abbr"
+                               class="form-control"
+                               placeholder="  "
+                               value="{{$translation -> translation_lang}}"
+                               name="category[0][abbr]">
 
-
-
-
-                            </div>
-                        </div>
+                        @error("category.0.abbr")
+                        <span class="text-danger"> هذا الحقل مطلوب</span>
+                        @enderror
                     </div>
-                </section>
-                <!-- // Basic form layout section end -->
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group mt-1">
+                        <input type="checkbox" value="1"
+                               name="category[0][active]"
+                               id="switcheryColor4"
+                               class="switchery" data-color="success"
+                               @if($translation -> active == 1)checked @endif/>
+                        <label for="switcheryColor4"
+                               class="card-title ml-1">الحالة {{__('messages.'.$translation -> translation_lang)}} </label>
+
+                        @error("category.0.active")
+                        <span class="text-danger"> </span>
+                        @enderror
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
 
+        <div class="form-actions">
+            <button type="button" class="btn btn-warning mr-1"
+                    onclick="history.back();">
+                <i class="ft-x"></i> تراجع
+            </button>
+            <button type="submit" class="btn btn-primary">
+                <i class="la la-check-square-o"></i> تحديث
+            </button>
+        </div>
+    </form>
+</div>
+
+    @endforeach
+@endisset
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- // Basic form layout section end -->
+</div>
+</div>
+</div>
 
 
-
-      
-       
 @endsection
 

@@ -41,5 +41,11 @@ public function getPhotoAttribute($val)
     }
 
 
+// get all translation categories
+    public function categories()
+    {
+        return $this->hasMany(self::class, 'translation_of');
+    }
+
 
 }
